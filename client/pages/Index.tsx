@@ -26,6 +26,7 @@ export default function Index() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // <-- Trigger once on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
