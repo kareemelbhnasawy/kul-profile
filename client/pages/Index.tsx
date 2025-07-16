@@ -335,22 +335,27 @@ export default function Index() {
               DELIVERING RESULTS
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-start">
             {Object.entries(services).map(([category, items]) => (
               <Card
                 key={category}
-                className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg animate-on-scroll ${
-                  expandedService === category
-                    ? "md:col-span-2 lg:col-span-2"
-                    : ""
-                }`}
-                onClick={() =>
-                  setExpandedService(
-                    expandedService === category ? null : category,
-                  )
-                }
+                className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg animate-on-scroll`}
+                onClick={() => {
+                  setExpandedService(prev =>
+                    prev === category ? null : category
+                  );
+                }}
+                style={{
+                  height:
+                    expandedService === category
+                      ? "auto"
+                      : "6.5rem", // collapsed height
+                  overflow: expandedService === category ? "visible" : "hidden",
+                }}
               >
-                <CardContent className="p-6">
+                <CardContent
+                  className={`p-6 transition-all duration-300`}
+                >
                   <h3 className="text-lg font-bold text-brand mb-4 uppercase tracking-wider">
                     {category}
                   </h3>
