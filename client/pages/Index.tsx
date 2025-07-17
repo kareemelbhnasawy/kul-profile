@@ -573,7 +573,7 @@ export default function Index() {
       </section>
 
       {/* Celebrity Engagement */}
-      <section id="celebrities" className="py-20 bg-background">
+      {/* <section id="celebrities" className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-brand mb-8">
@@ -584,10 +584,10 @@ export default function Index() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Individual Celebrity Sections */}
-      {celebrities.map((celebrity, index) => (
+      {[].map((celebrity, index) => (
         <section
           key={index}
           className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-card'}`}
@@ -694,7 +694,7 @@ export default function Index() {
       ))}
 
       {/* Celebrity Engagement Call to Action */}
-      <section className="py-20 bg-card">
+      {/* <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center animate-on-scroll">
             <div className="bg-background/50 backdrop-blur-sm border border-border/50 rounded-lg p-12 max-w-4xl mx-auto">
@@ -736,7 +736,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Clients */}
       <section className="py-20 bg-card">
