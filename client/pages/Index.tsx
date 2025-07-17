@@ -185,6 +185,51 @@ export default function Index() {
     },
   ];
 
+  const celebrities = [
+    {
+      name: "Emma Stone",
+      category: "Hollywood A-List",
+      engagement: "Brand Ambassador",
+      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "Academy Award winner with global appeal",
+    },
+    {
+      name: "Ryan Reynolds",
+      category: "Entertainment Icon",
+      engagement: "Creative Partnership",
+      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "Entrepreneur and entertainment mogul",
+    },
+    {
+      name: "Zendaya",
+      category: "Gen Z Influencer",
+      engagement: "Product Collaboration",
+      image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "Multi-talented actress and fashion icon",
+    },
+    {
+      name: "Michael B. Jordan",
+      category: "Lifestyle Brand",
+      engagement: "Strategic Partnership",
+      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "Actor, producer, and business entrepreneur",
+    },
+    {
+      name: "Margot Robbie",
+      category: "Global Ambassador",
+      engagement: "Campaign Lead",
+      image: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "International star and producer",
+    },
+    {
+      name: "Chris Hemsworth",
+      category: "Fitness & Wellness",
+      engagement: "Brand Partnership",
+      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400",
+      description: "Action star and wellness advocate",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Sticky Navigation */}
@@ -224,6 +269,12 @@ export default function Index() {
                 className="text-sm uppercase tracking-wider hover:text-primary transition-colors"
               >
                 Team
+              </a>
+              <a
+                href="#celebrities"
+                className="text-sm uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Celebrity Engagement
               </a>
               {/* <a
                 href="#contact"
@@ -516,6 +567,102 @@ export default function Index() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Celebrity Engagement */}
+      <section id="celebrities" className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand mb-8">
+              CELEBRITY ENGAGEMENT
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Connecting brands with A-list talent for authentic partnerships that drive global impact and cultural relevance
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {celebrities.map((celebrity, index) => (
+              <Card
+                key={index}
+                className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-card/80 backdrop-blur-sm border-border/50 animate-on-scroll overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-0">
+                  <div className="relative overflow-hidden">
+                    <div className="aspect-[4/5] overflow-hidden">
+                      <img
+                        src={celebrity.image}
+                        alt={celebrity.name}
+                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                      <p className="text-sm opacity-90 mb-2">{celebrity.description}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs uppercase tracking-wider bg-primary/20 px-2 py-1 rounded">
+                          {celebrity.engagement}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-brand mb-2">
+                      {celebrity.name}
+                    </h3>
+                    <p className="text-sm text-primary uppercase tracking-wider mb-3">
+                      {celebrity.category}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                        {celebrity.engagement}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                        <span className="text-primary text-xs">→</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16 animate-on-scroll">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-brand mb-4 uppercase tracking-wider">
+                Ready to Connect with A-List Talent?
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Our celebrity engagement team specializes in creating authentic partnerships that resonate with global audiences and drive measurable results.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="p-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">★</span>
+                  </div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">A-List Access</h4>
+                  <p className="text-xs text-muted-foreground">Direct connections to top-tier talent</p>
+                </div>
+                <div className="p-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">⚡</span>
+                  </div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">Strategic Matching</h4>
+                  <p className="text-xs text-muted-foreground">Perfect brand-celebrity alignment</p>
+                </div>
+                <div className="p-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">📈</span>
+                  </div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">Global Impact</h4>
+                  <p className="text-xs text-muted-foreground">Measurable results and ROI</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
