@@ -579,90 +579,160 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold text-brand mb-8">
               CELEBRITY ENGAGEMENT
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Connecting brands with A-list talent for authentic partnerships that drive global impact and cultural relevance
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {celebrities.map((celebrity, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-card/80 backdrop-blur-sm border-border/50 animate-on-scroll overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-0">
-                  <div className="relative overflow-hidden">
-                    <div className="aspect-[4/5] overflow-hidden">
-                      <img
-                        src={celebrity.image}
-                        alt={celebrity.name}
-                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                      <p className="text-sm opacity-90 mb-2">{celebrity.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs uppercase tracking-wider bg-primary/20 px-2 py-1 rounded">
-                          {celebrity.engagement}
-                        </span>
-                      </div>
-                    </div>
+      {/* Individual Celebrity Sections */}
+      {celebrities.map((celebrity, index) => (
+        <section
+          key={index}
+          className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-card'}`}
+        >
+          <div className="container mx-auto px-6">
+            <div className={`grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-center ${
+              index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+            }`}>
+              {/* Celebrity Info */}
+              <div className={`animate-on-scroll ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div className="mb-6">
+                  <span className="text-sm uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {celebrity.category}
+                  </span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-brand mb-6">
+                  {celebrity.name}
+                </h3>
+                <div className="mb-8">
+                  <h4 className="text-xl font-semibold text-primary mb-3 uppercase tracking-wider">
+                    {celebrity.engagement}
+                  </h4>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    {celebrity.description}
+                  </p>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Our partnership with {celebrity.name.split(' ')[0]} represents the pinnacle of celebrity brand collaboration, 
+                    combining authentic storytelling with strategic market positioning to create campaigns that resonate 
+                    globally and drive measurable business results.
+                  </p>
+                </div>
+                
+                {/* Engagement Highlights */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-card/50 p-4 rounded-lg border border-border/50">
+                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">Global Reach</h5>
+                    <p className="text-xs text-muted-foreground">Multi-platform campaign exposure</p>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-brand mb-2">
-                      {celebrity.name}
-                    </h3>
-                    <p className="text-sm text-primary uppercase tracking-wider mb-3">
-                      {celebrity.category}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
-                        {celebrity.engagement}
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                        <span className="text-primary text-xs">→</span>
-                      </div>
-                    </div>
+                  <div className="bg-card/50 p-4 rounded-lg border border-border/50">
+                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">Authentic Voice</h5>
+                    <p className="text-xs text-muted-foreground">Brand-aligned messaging</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16 animate-on-scroll">
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-brand mb-4 uppercase tracking-wider">
-                Ready to Connect with A-List Talent?
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our celebrity engagement team specializes in creating authentic partnerships that resonate with global audiences and drive measurable results.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="p-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-primary font-bold">★</span>
+                {/* CTA Button */}
+                <Button 
+                  size="lg" 
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 uppercase tracking-wider"
+                >
+                  View Partnership Details
+                </Button>
+              </div>
+
+              {/* Celebrity Images */}
+              <div className={`animate-on-scroll ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Main large image */}
+                  <div className="col-span-2 aspect-[4/3] overflow-hidden rounded-lg group">
+                    <img
+                      src={celebrity.image}
+                      alt={`${celebrity.name} - Main`}
+                      className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                    />
                   </div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">A-List Access</h4>
-                  <p className="text-xs text-muted-foreground">Direct connections to top-tier talent</p>
+                  
+                  {/* Two smaller images */}
+                  <div className="aspect-square overflow-hidden rounded-lg group">
+                    <img
+                      src={celebrity.image}
+                      alt={`${celebrity.name} - Portrait 1`}
+                      className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0 transition-all"
+                    />
+                  </div>
+                  <div className="aspect-square overflow-hidden rounded-lg group">
+                    <img
+                      src={celebrity.image}
+                      alt={`${celebrity.name} - Portrait 2`}
+                      className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0 transition-all"
+                    />
+                  </div>
                 </div>
-                <div className="p-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-primary font-bold">⚡</span>
+                
+                {/* Floating stats card */}
+                <div className="mt-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-brand">50M+</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Followers</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-brand">95%</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Engagement</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-brand">Global</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Reach</div>
+                    </div>
                   </div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">Strategic Matching</h4>
-                  <p className="text-xs text-muted-foreground">Perfect brand-celebrity alignment</p>
-                </div>
-                <div className="p-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-primary font-bold">📈</span>
-                  </div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider mb-2">Global Impact</h4>
-                  <p className="text-xs text-muted-foreground">Measurable results and ROI</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Celebrity Engagement Call to Action */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-6">
+          <div className="text-center animate-on-scroll">
+            <div className="bg-background/50 backdrop-blur-sm border border-border/50 rounded-lg p-12 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-brand mb-6 uppercase tracking-wider">
+                Ready to Connect with A-List Talent?
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Our celebrity engagement team specializes in creating authentic partnerships that resonate with global audiences and drive measurable results.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 mb-8">
+                <div className="p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary font-bold text-xl">★</span>
+                  </div>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">A-List Access</h4>
+                  <p className="text-sm text-muted-foreground">Direct connections to top-tier talent across entertainment, sports, and lifestyle</p>
+                </div>
+                <div className="p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary font-bold text-xl">⚡</span>
+                  </div>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">Strategic Matching</h4>
+                  <p className="text-sm text-muted-foreground">Perfect brand-celebrity alignment based on values, audience, and market positioning</p>
+                </div>
+                <div className="p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary font-bold text-xl">📈</span>
+                  </div>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">Global Impact</h4>
+                  <p className="text-sm text-muted-foreground">Measurable results and ROI through comprehensive campaign analytics</p>
+                </div>
+              </div>
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-lg uppercase tracking-wider"
+              >
+                Start Your Celebrity Partnership
+              </Button>
             </div>
           </div>
         </div>
