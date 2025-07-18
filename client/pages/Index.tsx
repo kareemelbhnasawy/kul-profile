@@ -187,47 +187,71 @@ export default function Index() {
 
   const celebrities = [
     {
-      name: "Emma Stone",
-      category: "Hollywood A-List",
-      engagement: "Brand Ambassador",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Academy Award winner with global appeal",
+      name: "Amr Diab",
+      category: "Middle Eastern Pop Legend",
+      // engagement: "Brand Ambassador",
+      image:
+        "https://cairogossip.com/app/uploads/2020/08/amrdiab-Instagram_0.jpg",
+      collabImg: "/images/amr-diab/amr-diab-1.jpeg",
+      collabImg2: "/images/amr-diab/amr-diab-2.jpeg",
+      description:
+        "Guinness World Record holder known as 'El Hadaba'. A dominant force in Arab pop music for decades with a massive, cross-generational following.",
     },
-    {
-      name: "Ryan Reynolds",
-      category: "Entertainment Icon",
-      engagement: "Creative Partnership",
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Entrepreneur and entertainment mogul",
-    },
-    {
-      name: "Zendaya",
-      category: "Gen Z Influencer",
-      engagement: "Product Collaboration",
-      image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Multi-talented actress and fashion icon",
-    },
-    {
-      name: "Michael B. Jordan",
-      category: "Lifestyle Brand",
-      engagement: "Strategic Partnership",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Actor, producer, and business entrepreneur",
-    },
-    {
-      name: "Margot Robbie",
-      category: "Global Ambassador",
-      engagement: "Campaign Lead",
-      image: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "International star and producer",
-    },
-    {
-      name: "Chris Hemsworth",
-      category: "Fitness & Wellness",
-      engagement: "Brand Partnership",
-      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Action star and wellness advocate",
-    },
+    // {
+    //   name: "Tamer Hosny",
+    //   category: "Arab Pop Superstar & Actor",
+    //   engagement: "Brand Ambassador",
+    //   image: "https://see.news/wp-content/uploads/2021/08/Tamer-Hosny.jpg",
+    //   collabImg: "https://see.news/wp-content/uploads/2021/08/Tamer-Hosny.jpg",
+    //   collabImg2: "https://see.news/wp-content/uploads/2021/08/Tamer-Hosny.jpg",
+    //   description:
+    //     "Known as the 'Star of the Generation', a multi-talented singer, actor, and director with massive appeal across the Middle East.",
+    // },
+    // {
+    //   name: "Ryan Reynolds",
+    //   category: "Entertainment Icon",
+    //   engagement: "Creative Partnership",
+    //   image:
+    //     "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   collabImg:
+    //     "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   collabImg2:
+    //     "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   description: "Entrepreneur and entertainment mogul",
+    // },
+    // {
+    //   name: "Zendaya",
+    //   category: "Gen Z Influencer",
+    //   engagement: "Product Collaboration",
+    //   image:
+    //     "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=400",
+
+    //   description: "Multi-talented actress and fashion icon",
+    // },
+    // {
+    //   name: "Michael B. Jordan",
+    //   category: "Lifestyle Brand",
+    //   engagement: "Strategic Partnership",
+    //   image:
+    //     "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   description: "Actor, producer, and business entrepreneur",
+    // },
+    // {
+    //   name: "Margot Robbie",
+    //   category: "Global Ambassador",
+    //   engagement: "Campaign Lead",
+    //   image:
+    //     "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   description: "International star and producer",
+    // },
+    // {
+    //   name: "Chris Hemsworth",
+    //   category: "Fitness & Wellness",
+    //   engagement: "Brand Partnership",
+    //   image:
+    //     "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400",
+    //   description: "Action star and wellness advocate",
+    // },
   ];
 
   return (
@@ -295,9 +319,10 @@ export default function Index() {
             WE MOVE THE NEEDLE
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed animate-on-scroll">
-            We are not a consultancy firm, we are an extension of your team to
-            build with you, to connect you, and responsibility to delivering
-            your goals.
+            More than a consultancy, we’re an extension of your team.
+            <br />
+            Here to build with you, connect you, and turn your goals into
+            results.
           </p>
           {/* <Button
             size="lg"
@@ -358,9 +383,9 @@ export default function Index() {
             <div className="animate-on-scroll">
               <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden">
                 <img
-                  src="/images/team/mary-ghobrial2.jpg"
+                  src="/images/mary/mary-2.jpeg"
                   alt="Mary Ghobrial"
-                  className="object-cover w-full h-full"
+                  className="object-cover object-top w-full h-full"
                 />
               </div>
             </div>
@@ -392,21 +417,16 @@ export default function Index() {
                 key={category}
                 className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg animate-on-scroll`}
                 onClick={() => {
-                  setExpandedService(prev =>
-                    prev === category ? null : category
+                  setExpandedService((prev) =>
+                    prev === category ? null : category,
                   );
                 }}
                 style={{
-                  height:
-                    expandedService === category
-                      ? "auto"
-                      : "6.5rem", // collapsed height
+                  height: expandedService === category ? "auto" : "6.5rem", // collapsed height
                   overflow: expandedService === category ? "visible" : "hidden",
                 }}
               >
-                <CardContent
-                  className={`p-6 transition-all duration-300`}
-                >
+                <CardContent className={`p-6 transition-all duration-300`}>
                   <h3 className="text-lg font-bold text-brand mb-4 uppercase tracking-wider">
                     {category}
                   </h3>
@@ -573,31 +593,36 @@ export default function Index() {
       </section>
 
       {/* Celebrity Engagement */}
-      {/* <section id="celebrities" className="py-20 bg-background">
+      <section id="celebrities" className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-brand mb-8">
               CELEBRITY ENGAGEMENT
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Connecting brands with A-list talent for authentic partnerships that drive global impact and cultural relevance
+              Connecting brands with A-list talent for authentic partnerships
+              that drive global impact and cultural relevance
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Individual Celebrity Sections */}
-      {[].map((celebrity, index) => (
+      {celebrities.map((celebrity, index) => (
         <section
           key={index}
-          className={`py-20 ${index % 2 === 0 ? 'bg-background' : 'bg-card'}`}
+          className={`py-20 ${index % 2 === 0 ? "bg-background" : "bg-card"}`}
         >
           <div className="container mx-auto px-6">
-            <div className={`grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-center ${
-              index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-            }`}>
+            <div
+              className={`grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-center ${
+                index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+              }`}
+            >
               {/* Celebrity Info */}
-              <div className={`animate-on-scroll ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div
+                className={`animate-on-scroll ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
+              >
                 <div className="mb-6">
                   <span className="text-sm uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
                     {celebrity.category}
@@ -614,35 +639,47 @@ export default function Index() {
                     {celebrity.description}
                   </p>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    Our partnership with {celebrity.name.split(' ')[0]} represents the pinnacle of celebrity brand collaboration, 
-                    combining authentic storytelling with strategic market positioning to create campaigns that resonate 
-                    globally and drive measurable business results.
+                    Our partnership with {celebrity.name.split(" ")[0]}{" "}
+                    represents the pinnacle of celebrity brand collaboration,
+                    combining authentic storytelling with strategic market
+                    positioning to create campaigns that resonate globally and
+                    drive measurable business results.
                   </p>
                 </div>
-                
+
                 {/* Engagement Highlights */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
+                {/* <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-card/50 p-4 rounded-lg border border-border/50">
-                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">Global Reach</h5>
-                    <p className="text-xs text-muted-foreground">Multi-platform campaign exposure</p>
+                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">
+                      Global Reach
+                    </h5>
+                    <p className="text-xs text-muted-foreground">
+                      Multi-platform campaign exposure
+                    </p>
                   </div>
                   <div className="bg-card/50 p-4 rounded-lg border border-border/50">
-                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">Authentic Voice</h5>
-                    <p className="text-xs text-muted-foreground">Brand-aligned messaging</p>
+                    <h5 className="font-bold text-sm uppercase tracking-wider mb-2 text-brand">
+                      Authentic Voice
+                    </h5>
+                    <p className="text-xs text-muted-foreground">
+                      Brand-aligned messaging
+                    </p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* CTA Button */}
-                <Button 
+                {/* <Button 
                   size="lg" 
                   className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 uppercase tracking-wider"
                 >
                   View Partnership Details
-                </Button>
+                </Button> */}
               </div>
 
               {/* Celebrity Images */}
-              <div className={`animate-on-scroll ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+              <div
+                className={`animate-on-scroll ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}
+              >
                 <div className="grid grid-cols-2 gap-4">
                   {/* Main large image */}
                   <div className="col-span-2 aspect-[4/3] overflow-hidden rounded-lg group">
@@ -652,41 +689,49 @@ export default function Index() {
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  
+
                   {/* Two smaller images */}
                   <div className="aspect-square overflow-hidden rounded-lg group">
                     <img
-                      src={celebrity.image}
+                      src={celebrity.collabImg}
                       alt={`${celebrity.name} - Portrait 1`}
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0 transition-all"
                     />
                   </div>
                   <div className="aspect-square overflow-hidden rounded-lg group">
                     <img
-                      src={celebrity.image}
+                      src={celebrity.collabImg2}
                       alt={`${celebrity.name} - Portrait 2`}
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0 transition-all"
                     />
                   </div>
                 </div>
-                
+
                 {/* Floating stats card */}
-                <div className="mt-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+                {/* <div className="mt-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6">
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-2xl font-bold text-brand">50M+</div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Followers</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                        Followers
+                      </div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-brand">95%</div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Engagement</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                        Engagement
+                      </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-brand">Global</div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Reach</div>
+                      <div className="text-2xl font-bold text-brand">
+                        Global
+                      </div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                        Reach
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -702,33 +747,50 @@ export default function Index() {
                 Ready to Connect with A-List Talent?
               </h3>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Our celebrity engagement team specializes in creating authentic partnerships that resonate with global audiences and drive measurable results.
+                Our celebrity engagement team specializes in creating authentic
+                partnerships that resonate with global audiences and drive
+                measurable results.
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="p-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-primary font-bold text-xl">★</span>
                   </div>
-                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">A-List Access</h4>
-                  <p className="text-sm text-muted-foreground">Direct connections to top-tier talent across entertainment, sports, and lifestyle</p>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">
+                    A-List Access
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Direct connections to top-tier talent across entertainment,
+                    sports, and lifestyle
+                  </p>
                 </div>
                 <div className="p-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-primary font-bold text-xl">⚡</span>
                   </div>
-                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">Strategic Matching</h4>
-                  <p className="text-sm text-muted-foreground">Perfect brand-celebrity alignment based on values, audience, and market positioning</p>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">
+                    Strategic Matching
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Perfect brand-celebrity alignment based on values, audience,
+                    and market positioning
+                  </p>
                 </div>
                 <div className="p-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-primary font-bold text-xl">📈</span>
                   </div>
-                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">Global Impact</h4>
-                  <p className="text-sm text-muted-foreground">Measurable results and ROI through comprehensive campaign analytics</p>
+                  <h4 className="font-bold text-lg uppercase tracking-wider mb-3 text-brand">
+                    Global Impact
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Measurable results and ROI through comprehensive campaign
+                    analytics
+                  </p>
                 </div>
               </div>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-lg uppercase tracking-wider"
               >
                 Start Your Celebrity Partnership
@@ -749,11 +811,11 @@ export default function Index() {
               Proud to partner with industry leaders and emerging innovators
             </p>
             {/* <div className="bg-muted rounded-lg p-12 max-w-4xl mx-auto flex items-center justify-center"> */}
-              <img
-                src="/images/clients.jpeg"
-                alt="Clients and Partnerships"
-                className="object-contain rounded-xl"
-              />
+            <img
+              src="/images/clients.jpeg"
+              alt="Clients and Partnerships"
+              className="object-contain rounded-xl"
+            />
             {/* </div> */}
           </div>
         </div>
